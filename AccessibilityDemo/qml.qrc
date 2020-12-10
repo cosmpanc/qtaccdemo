@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>FirstPage.qml</file>
+        <file>SecondPage.qml</file>
+        <file>ThirdPage.qml</file>
+        <file>Header.qml</file>
+        <file>ModalDialog.qml</file>
+        <file>StandardButton.qml</file>
+    </qresource>
+</RCC>
