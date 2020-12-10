@@ -5,9 +5,7 @@ AppModel::AppModel()
 {
 }
 
-Q_INVOKABLE void AppModel::announceText(
-        QQuickItem* item,
-        const QString& text)
+Q_INVOKABLE void AppModel::announceText(QQuickItem* item, const QString& text)
 {
     // This works even for items that don't have a Value property
     // e.g. items with role QAccessible::StaticText
