@@ -8,6 +8,7 @@ Item {
 
     Header {
         id: header
+        Accessible.ignored: confirmDialog.opened
         text: "Choose your install options"
     }
 
@@ -42,18 +43,21 @@ Item {
         Column {
             CheckBox {
                 id: checkbox1
+                Accessible.ignored: confirmDialog.opened
                 text: "Install application"
                 checkState: Qt.Checked
             }
 
             CheckBox {
                 id: checkbox2
+                Accessible.ignored: confirmDialog.opened
                 text: "Copy my files"
                 checkState: Qt.Checked
             }
 
             CheckBox {
                 id: checkbox3
+                Accessible.ignored: confirmDialog.opened
                 text: "Setup account"
                 checkState: Qt.Unchecked
             }
@@ -75,24 +79,29 @@ Item {
 
     StandardButton {
         id: backButton
-        text: "Back"
+
+        Accessible.ignored: confirmDialog.opened
+
         anchors.bottom: parent.bottom
         anchors.bottomMargin: 30
         anchors.right: nextButton.left
         anchors.rightMargin: 10
 
+        text: "Back"
         onClicked: loader.previousPage()
     }
 
     StandardButton {
         id: nextButton
-        text: "Next"
+
+        Accessible.ignored: confirmDialog.opened
 
         anchors.bottom: parent.bottom
         anchors.bottomMargin: 30
         anchors.right: parent.right
         anchors.rightMargin: 30
 
+        text: "Next"
         onClicked: {
             if (root.showWarning) {
                 confirmDialog.open();

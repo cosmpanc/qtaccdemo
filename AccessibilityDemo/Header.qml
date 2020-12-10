@@ -11,8 +11,9 @@ Rectangle {
     anchors.horizontalCenter: parent.horizontalCenter
     anchors.top: parent.top
     anchors.topMargin: 40
-    height: title.implicitHeight
+
     width: parent.width - 200
+    height: title.implicitHeight
 
     Text {
         id: title

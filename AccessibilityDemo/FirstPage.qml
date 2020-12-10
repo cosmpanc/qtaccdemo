@@ -12,8 +12,8 @@ Item {
         focus: true
     }
 
-    // Optional, announce the text instead of relying
-    // on initial forceActiveFocus
+    // This should not be needed since header.focus is true
+    // only used to show how to use announceText.
     onVisibleChanged: {
         if (visible) {
             appModel.announceText(header, header.text);
